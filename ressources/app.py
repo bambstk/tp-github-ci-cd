@@ -8,7 +8,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 # Simule un résumé de logs issu du TP Bash / PowerShell
-LOG_SUMMARY = {
+LOG_SUMMARY={
     "info": 142,
     "warning": 28,
     "error": 12,
@@ -28,7 +28,7 @@ def health():
 
 @app.route("/logs/summary")
 def logs_summary():
-    return jsonify(LOG_SUMMARY)
+    return jsonify(LOG_SUMMAR)
 
 
 @app.route("/logs/critical")
