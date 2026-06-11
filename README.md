@@ -1782,7 +1782,7 @@ data["breakdown"]["info"] == 142 pour couvrir tous les niveaux.
 
 ---
 
-### Exercice 6.6 — Secret Scanning
+### Exercice 6.4 — Secret Scanning
 
 GitHub scanne automatiquement les commits à la recherche de patterns reconnus comme des credentials (clés AWS, tokens GitHub, clés Azure, mots de passe courants…). Si un secret est détecté, GitHub envoie une alerte et, pour certains fournisseurs, révoque le token automatiquement.
 
