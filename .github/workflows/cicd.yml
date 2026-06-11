@@ -10,6 +10,8 @@ jobs:
   # ── Job 1 : Qualité ────────────────────────────────────────────────
   qualite:
     runs-on: ubuntu-latest
+    permissions :
+      contents: read
 
     steps:
       - uses: actions/checkout@v6
@@ -29,6 +31,9 @@ jobs:
   # ── Job 2 : Staging ───────────────────────────────────────────────
   staging:
     runs-on: ubuntu-latest
+    permissions :
+      contents: read
+
     needs: qualite                 # attend que le job qualite réussisse
     environment: staging
     if: github.ref_name == 'main'  # uniquement sur la branche main
@@ -53,6 +58,8 @@ jobs:
   # ── Job 3 : Production ────────────────────────────────────────────
   production:
     runs-on: ubuntu-latest
+    permissions :
+      contents: read
     needs: staging
     environment: production
     if: github.ref_name == 'main'
